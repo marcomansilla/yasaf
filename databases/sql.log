@@ -7,3 +7,12 @@ CREATE TABLE "links"(
     "created_on" CHAR(512)
 );
 success!
+timestamp: 2019-09-04T15:02:13.526696
+CREATE TABLE "referrers"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "link" INTEGER REFERENCES "links" ("id") ON DELETE CASCADE  ,
+    "referrer" CHAR(512),
+    "visited_on" CHAR(512),
+    "user_data" CHAR(512)
+);
+success!

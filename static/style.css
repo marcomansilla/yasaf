@@ -1,0 +1,28 @@
+body {
+	background-image:url('./wall.png');
+	margin:0px;
+	padding:0px;
+	min-height:100vh;
+}
+
+h2 {
+	color:#fff !important
+}
+
+#footer {
+	text-align:center;
+	position:relative;
+	bottom:0
+}
+
+nav {
+	position:absolute;
+}
+.hero {
+	max-width:70%;
+	border-radius:10px;
+	text-align:center;
+	margin:10rem auto;
+	background-color:#a6dadd;
+	height:50vh
+}

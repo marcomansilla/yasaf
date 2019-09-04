@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		{% block head %}
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+		<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+		<title>Yet Another Shortener App with Flask</title>
+		{% endblock %}
+	</head>
+	<body>
+		<nav class="navbar" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="https://bulma.io">
+					<h2 class="title is-2 has-text-warning">YASAF</h2>
+				</a>
+
+				<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
+
+			<div id="navbarBasicExample" class="navbar-menu">
+				<div class="navbar-start">
+					<a class="navbar-item" href="/">
+						Home
+					</a>
+
+					<a class="navbar-item" href="/stats">
+						Stats
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<div id="content" class="container">
+			{% block content %}{% endblock %}
+		</div>
+		<div id="footer">
+			{% block footer %}
+			&copy; Copyright 2019 by <a href="http://domain.invalid/">you</a>.
+			{% endblock %}
+		</div>
+	</body>
+</html>
