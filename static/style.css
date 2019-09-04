@@ -17,6 +17,15 @@ h2 {
 
 nav {
 	position:absolute;
+	background-color:transparent !important
+}
+
+.navbar-brand {
+	margin-left:2rem;
+}
+
+form {
+	padding:6rem 0
 }
 .hero {
 	max-width:70%;
