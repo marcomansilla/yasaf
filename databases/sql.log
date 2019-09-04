@@ -1,0 +1,9 @@
+timestamp: 2019-09-04T01:33:01.811828
+CREATE TABLE "links"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "original_url" CHAR(512),
+    "short_url" CHAR(512),
+    "visits" INTEGER,
+    "created_on" CHAR(512)
+);
+success!

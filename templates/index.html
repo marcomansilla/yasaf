@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+		<title>document</title>
+	</head>
+	<body>
+		<form action="{{ url_for('short.new_link') }}" method="POST">
+			<input name="original_url" type="text" value="" placeholder="Insert the URL"/>
+			<input name="" type="submit" value="Submit"/>
+		</form>
+	</body>
+</html>
