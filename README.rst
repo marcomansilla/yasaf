@@ -15,10 +15,11 @@ How does it work?
 -----------------
 
  - Just clone the repo
- - pip install -r requirements.txt
+ - pip3 install -r requirements.txt
  - python3 app.py
  - open the browser on http://localhost:5000
 
+The app stores the links in a sqlite3 database managed by pyDAL, and with Flask would be the only deppendencies to make it work.
 Should it do more?
 ------------------
 

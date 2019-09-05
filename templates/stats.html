@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="hero">
+	<div class="hero-title">
+		<h2 class="title is-2">General Statistics</h2>
+	</div>
+	<div class="hero-body">
+		<table class="table is-fullwidth">
+			<thead>
+				<tr>
+					<th>Original Link</th>
+					<th>Short Link</th>
+					<th>Visits</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for link in links %}
+				<tr>
+					<td>{{ link.original_url }}</td>
+					<td>{{ link.short_url }}</td>
+					<td>{{ link.visits }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	<div class="hero-foot">
+		<div class="pagination">
+			{% for page in range(pages)%}
+			<a href="/stats/{{page}}" class="is-link button">{{page+1}}</a>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+{% endblock %}

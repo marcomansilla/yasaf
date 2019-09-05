@@ -32,11 +32,19 @@ form {
 	padding:6rem 0
 }
 
+.pagination {
+	display:inline-block;
+}
+
 .hero {
-	max-width:70%;
+	max-width:80%;
 	border-radius:10px;
 	text-align:center;
 	margin:10rem auto;
 	background-color:#a6dadd;
-	height:50vh
+	height:60vh
+}
+
+.hero-foot {
+	padding:2rem;
 }

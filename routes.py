@@ -1,6 +1,7 @@
 from flask import request, Blueprint, render_template, redirect
 from models import *
 from functions import generate_short_link, add_link
+import math
 
 short = Blueprint('short', __name__)
 
@@ -27,8 +28,15 @@ def new_link():
 	return render_template('new_link.html', data=result.get_json())
 
 @short.route('/stats')
-def stats():
-	return 'view'
+@short.route('/stats/<int:page>')
+def stats(page=0):
+	db._adapter.reconnect()
+	links=db(db.links.id>0)
+	pages = math.ceil(links.count()/8)
+	paginated_links = links.select().as_list()[page*7:(page+1)*7]
+	return render_template('stats.html',
+						   links=paginated_links,
+						   pages=pages)
 
 @short.errorhandler(404)
 def page_not_found(e):

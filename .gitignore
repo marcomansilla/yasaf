@@ -90,7 +90,9 @@ dist
 .idea
 
 # Custom
-databases/
+*.tables
+*.sqlite
+*.log
 uploads/
 design/
 experimental/
