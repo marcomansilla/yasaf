@@ -18,7 +18,8 @@
 				{% for link in links %}
 				<tr>
 					<td>{{ link.original_url }}</td>
-					<td>{{ link.short_url }}</td>
+					<td><a href="{{url_for('short.redirect_to_url', short_url = link.short_url, _external=True)}}"
+						   target="_blank">{{link.short_url}}</a></td>
 					<td>{{ link.visits }}</td>
 				</tr>
 				{% endfor %}
