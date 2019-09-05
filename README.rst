@@ -24,3 +24,5 @@ Should it do more?
 ------------------
 
 Not sure, URL shortening and manging some statistics on earch link should be enough.
+
+**It does not accepts an URL twice, checks if it is already stored and returns existing link**
