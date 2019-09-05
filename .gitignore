@@ -90,7 +90,7 @@ dist
 .idea
 
 # Custom
-*.tables
+*.table
 *.sqlite
 *.log
 uploads/
